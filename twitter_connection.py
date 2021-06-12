@@ -1,13 +1,12 @@
-import tweepy
 from tweepy import Stream
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 import json
 
-consumer_key='ptw6m8PmoA7l4zOoSzhD8WPPR'
-consumer_secret='Fh5IhNpeI9A4TRUJOtTgVtsDI3RPuEnXxtha3J5QF3thLiiwao'
-access_token ='903883084378005504-vTDF9Zi6DJNDm7JItMA5Qq4suOlDt9v'
-access_secret='PyKXdwGV2mLofYTOh8mXhgLcITUz70lpy7vitaiGf2ON0'
+consumer_key='CONSUMER_KEY'
+consumer_secret='CONSUMER_SECRET'
+access_token ='ACCESS_TOKEN'
+access_secret='ACCESS_SECRET'
 
 csv = open('OutputStreaming.csv','a')
 
@@ -43,8 +42,6 @@ class TweetsListener(StreamListener):
     def on_error(self, status):
       print(status)
       return True
-
-
 
 print('start sending data from Twitter to socket')
 # authentication based on the credentials
